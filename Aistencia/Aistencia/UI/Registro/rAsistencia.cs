@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aistencia.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Aistencia.UI.Registro
 {
     public partial class rAsistencia : Form
     {
+        public List<AsistenciaDetalle> Detalle { get; set; }
         public rAsistencia()
         {
             InitializeComponent();
+            this.Detalle = new List<AsistenciaDetalle>();
+            this.DetalledataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
     }
 }

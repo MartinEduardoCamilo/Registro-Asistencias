@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PatronRepositorio.BLL
+namespace Aistencia.BLL
 {
     public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
     {

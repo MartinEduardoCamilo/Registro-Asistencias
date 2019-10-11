@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PatronRepositorio.BLL
+namespace Aistencia.BLL
 {
     public interface IRepository<T> where T: class
     {
