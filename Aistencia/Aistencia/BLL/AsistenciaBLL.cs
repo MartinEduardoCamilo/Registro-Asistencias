@@ -37,7 +37,7 @@ namespace RegistroAsistencia.BLL
             Contexto db = new Contexto();
             try
             {
-                var Anterior = db.Asistencias.Find(asistencia.AsistenciaID);
+                var Anterior = AsistenciaBLL.Buscar(asistencia.AsistenciaID);
                 foreach(var item in Anterior.Presente)
                 {
                     if (!asistencia.Presente.Exists(d => d.ID == item.ID))

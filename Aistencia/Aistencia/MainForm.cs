@@ -20,9 +20,9 @@ namespace RegistroAsistencia
 
         private void asistenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //rAsistencia asistencia = new rAsistencia();
-            //asistencia.MdiParent = this;
-            //asistencia.Show();
+            rAsistencia asistencia = new rAsistencia();
+            asistencia.MdiParent = this;
+            asistencia.Show();
         }
     }
 }

@@ -35,6 +35,7 @@ namespace RegistroAsistencia.BLL
         public virtual bool Modificar(T entity)
         {
             bool paso = false;
+
             try
             {
                 db.Entry(entity).State = EntityState.Modified;
@@ -42,6 +43,7 @@ namespace RegistroAsistencia.BLL
             }
             catch (Exception)
             {
+
                 throw;
             }
             return paso;
