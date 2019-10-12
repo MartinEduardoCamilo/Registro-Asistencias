@@ -114,31 +114,35 @@ namespace RegistroAsistencia.UI.Registro
 
             if (AsignaturacomboBox.SelectedIndex == -1)
             {
-                MyError.SetError(AsignaturacomboBox, "Debe elegir una asignatura.");
+                MyError.SetError(AsignaturacomboBox, "Debe elegir una asignatura");
+                AsignaturacomboBox.Focus();
                 paso = false;
             }
 
-            if (AsignaturacomboBox.Text == "")
+            if (AsignaturacomboBox.Text == string.Empty)
             {
-                MyError.SetError(AsignaturacomboBox, "Debe elegir una asignatura.");
+                MyError.SetError(AsignaturacomboBox, "Debe elegir una asignatura");
+                AsignaturacomboBox.Focus();
                 paso = false;
             }
 
             if (EstudiantecomboBox.SelectedIndex == -1)
             {
-                MyError.SetError(EstudiantecomboBox, "Debe elegir un estudiante.");
+                MyError.SetError(EstudiantecomboBox, "Debe elegir un estudiante");
+                EstudiantecomboBox.Focus();
                 paso = false;
             }
 
-            if (EstudiantecomboBox.Text == "")
+            if (EstudiantecomboBox.Text == string.Empty)
             {
-                MyError.SetError(EstudiantecomboBox, "Debe elegir un estudiante.");
+                MyError.SetError(EstudiantecomboBox, "Debe elegir un estudiante");
+                EstudiantecomboBox.Focus();
                 paso = false;
             }
 
             if (this.Detalles.Count == 0)
             {
-                MyError.SetError(Agregarbutton, "Debe agregar por lo menos un estudiante.");
+                MyError.SetError(Agregarbutton, "Debe agregar por lo menos un estudiante");
                 Agregarbutton.Focus();
                 paso = false;
             }
@@ -153,12 +157,14 @@ namespace RegistroAsistencia.UI.Registro
 
             if (EstudiantecomboBox.SelectedIndex == -1)
             {
-                MyError.SetError(EstudiantecomboBox, "Debe elegir al menos un estudiante.");
+                MyError.SetError(EstudiantecomboBox, "Debe elegir al menos un estudiante");
+                EstudiantecomboBox.Focus();
                 paso = false;
             }
-            if (EstudiantecomboBox.Text == "")
+            if (EstudiantecomboBox.Text == string.Empty)
             {
-                MyError.SetError(EstudiantecomboBox, "Debe elegir al menos un estudiante.");
+                MyError.SetError(EstudiantecomboBox, "Debe elegir al menos un estudiante");
+                EstudiantecomboBox.Focus();
                 paso = false;
             }
 
@@ -169,6 +175,7 @@ namespace RegistroAsistencia.UI.Registro
                     if(objeto.EstudianteID == (int)(EstudiantecomboBox.SelectedValue))
                     {
                         MyError.SetError(EstudiantecomboBox, "Ya existe un estudiante");
+                        EstudiantecomboBox.Focus();
                         return paso = false;
                     }
                 }
@@ -244,7 +251,7 @@ namespace RegistroAsistencia.UI.Registro
                 (
                     new AsistenciaDetalle(
                             iD: 0,
-                            asistenciaId: 0,
+                            asistenciaId: (int)AsistenciaIDnumericUpDown.Value,
                             estudianteID: id,
                             nombre: getEstudiante(),
                             presente: PresentecheckBox.Checked

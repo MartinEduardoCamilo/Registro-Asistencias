@@ -33,5 +33,12 @@ namespace RegistroAsistencia.Entidades
             this.Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
             this.Presente = presente;
         }
+
+        public AsistenciaDetalle(int estudianteID, string nombre, bool presente)
+        {
+            this.EstudianteID = estudianteID;
+            this.Nombre = nombre;
+            this.Presente = presente;
+        }
     }
 }

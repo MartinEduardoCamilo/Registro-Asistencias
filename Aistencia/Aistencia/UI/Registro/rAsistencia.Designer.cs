@@ -285,7 +285,7 @@
             this.Controls.Add(this.AsistenciaIDnumericUpDown);
             this.Controls.Add(this.label1);
             this.Name = "rAsistencia";
-            this.Text = "rAsistencia";
+            this.Text = "Registro de Asistencia";
             ((System.ComponentModel.ISupportInitialize)(this.AsistenciaIDnumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
