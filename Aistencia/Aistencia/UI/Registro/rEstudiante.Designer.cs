@@ -1,4 +1,4 @@
-﻿namespace Aistencia.UI.Registro
+﻿namespace RegistroAsistencia.UI.Registro
 {
     partial class rEstudiante
     {

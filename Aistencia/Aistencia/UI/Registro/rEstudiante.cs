@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Aistencia.BLL;
-using Aistencia.Entidades;
+using RegistroAsistencia.BLL;
+using RegistroAsistencia.Entidades;
 
-namespace Aistencia.UI.Registro
+namespace RegistroAsistencia.UI.Registro
 {
     public partial class rEstudiante : Form
     {

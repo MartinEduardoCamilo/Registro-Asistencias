@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Aistencia.Properties
+namespace RegistroAsistencia.Properties
 {
 
 

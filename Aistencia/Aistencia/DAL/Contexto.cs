@@ -1,4 +1,4 @@
-﻿using Aistencia.Entidades;
+﻿using RegistroAsistencia.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aistencia.DAL
+namespace RegistroAsistencia.DAL
 {
     public class Contexto : DbContext
     {

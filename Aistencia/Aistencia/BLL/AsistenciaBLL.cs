@@ -1,5 +1,5 @@
-﻿using Aistencia.DAL;
-using Aistencia.Entidades;
+﻿using RegistroAsistencia.DAL;
+using RegistroAsistencia.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aistencia.BLL
+namespace RegistroAsistencia.BLL
 {
     public class AsistenciaBLL
     { 
@@ -37,10 +37,10 @@ namespace Aistencia.BLL
             Contexto db = new Contexto();
             try
             {
-                var Anterior = AsistenciaBLL.Buscar(asistencia.AsistenciaId);
+                var Anterior = db.Asistencias.Find(asistencia.AsistenciaID);
                 foreach(var item in Anterior.Presente)
                 {
-                    if (!asistencia.Presente.Exists(d => d.Id == item.Id))
+                    if (!asistencia.Presente.Exists(d => d.ID == item.ID))
                     {
                         db.Entry(item).State = EntityState.Deleted;
                     }                                         

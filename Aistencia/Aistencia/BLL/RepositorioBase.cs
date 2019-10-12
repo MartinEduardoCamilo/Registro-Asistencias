@@ -1,4 +1,4 @@
-﻿using Aistencia.DAL;
+﻿using RegistroAsistencia.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aistencia.BLL
+namespace RegistroAsistencia.BLL
 {
     public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
     {

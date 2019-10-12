@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aistencia.BLL
+namespace RegistroAsistencia.BLL
 {
     public interface IRepository<T> where T: class
     {

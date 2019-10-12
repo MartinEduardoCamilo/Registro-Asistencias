@@ -1,4 +1,5 @@
-﻿using Aistencia.Entidades;
+﻿using RegistroAsistencia.BLL;
+using RegistroAsistencia.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,17 +10,55 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Aistencia.UI.Registro
+namespace RegistroAsistencia.UI.Registro
 {
     public partial class rAsistencia : Form
     {
-        public List<AsistenciaDetalle> Detalle { get; set; }
+
         public rAsistencia()
         {
             InitializeComponent();
-            this.Detalle = new List<AsistenciaDetalle>();
-            this.DetalledataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgregarAsignaturabutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgregarEstudiantebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Agregarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Removerbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Guardarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
 
         }
     }
 }
+
