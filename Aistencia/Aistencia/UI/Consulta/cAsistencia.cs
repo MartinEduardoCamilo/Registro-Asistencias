@@ -21,31 +21,33 @@ namespace Aistencia.UI.Consulta
 
         private void Consultabutton_Click(object sender, EventArgs e)
         {
-            var listado = new List<Asistencia>();
+            RepositorioBase<Estudiante> repositorio = new RepositorioBase<Estudiante>();
+            var listado = new List<Estudiante>();
+            
 
             if (CriteriotextBox.Text.Trim().Length > 0)
             {
                 switch (FiltrocomboBox.SelectedIndex)
                 {
                     case 0:
-                        listado = AsistenciaBLL.GetList(p => true);
+                        listado = repositorio.GetList(p => true);
                         break;
 
                     case 1:
-                        int id = Convert.ToInt32(CriteriotextBox.Text);
-                        listado = AsistenciaBLL.GetList(p => p.AsistenciaID == id);
+                        //int id = Convert.ToInt32(CriteriotextBox.Text);
+                        //listado = AsistenciaBLL.GetList(p => p.AsistenciaID == id);
                         break;
                     case 2:
                         int ID = Convert.ToInt32(CriteriotextBox.Text);
-                        listado = AsistenciaBLL.GetList(p => p.Asignaturaid == ID);
+                        //listado = AsistenciaBLL.GetList(p => p.Asignaturaid == ID);
                         break;
                 }
 
-                listado = listado.Where(c => c.Fecha.Date >= DesdedateTimePicker.Value.Date && c.Fecha.Date <= HastadateTimePicker.Value.Date).ToList();
+                //listado = listado.Where(c => c.Fecha.Date >= DesdedateTimePicker.Value.Date && c.Fecha.Date <= HastadateTimePicker.Value.Date).ToList();
             }
             else
             {
-                listado = AsistenciaBLL.GetList(p => true);
+                listado = repositorio.GetList(p => true);
             }
 
             dataGridView1.DataSource = null;

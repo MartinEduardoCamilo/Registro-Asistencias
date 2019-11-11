@@ -14,6 +14,7 @@ namespace RegistroAsistencia.Entidades
         public int ID { get; set; }
         public int AsistenciaId { get; set; }
         public int EstudianteID { get; set; }
+        public int AsignaturaId { get; set; }
         public string Nombre { get; set; }
         public bool Presente { get; set; }
 
@@ -25,20 +26,15 @@ namespace RegistroAsistencia.Entidades
             Nombre = string.Empty;
             Presente = false;
         }
-        public AsistenciaDetalle(int iD, int asistenciaId, int estudianteID, string nombre, bool presente)
-        {
-            this.ID = iD;
-            this.AsistenciaId = asistenciaId;
-            this.EstudianteID = estudianteID;
-            this.Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
-            this.Presente = presente;
-        }
 
-        public AsistenciaDetalle(int estudianteID, string nombre, bool presente)
+        public AsistenciaDetalle(int iD, int asistenciaId, int estudianteID, int asignaturaId, string nombre, bool presente)
         {
-            this.EstudianteID = estudianteID;
-            this.Nombre = nombre;
-            this.Presente = presente;
+            ID = iD;
+            AsistenciaId = asistenciaId;
+            EstudianteID = estudianteID;
+            AsignaturaId = asignaturaId;
+            Nombre = nombre;
+            Presente = presente;
         }
     }
 }

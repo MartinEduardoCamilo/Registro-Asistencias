@@ -28,7 +28,7 @@ namespace RegistroAsistencia
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cAsistencia asistencia = new cAsistencia();
+            Form asistencia = new cAsistencia();
             asistencia.MdiParent = this;
             asistencia.Show();
         }

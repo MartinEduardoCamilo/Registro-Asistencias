@@ -1,8 +1,9 @@
 ﻿using RegistroAsistencia.DAL;
 using RegistroAsistencia.Entidades;
+using RegistroAsistencia.BLL;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using System.Data.Entity; 
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -18,8 +19,17 @@ namespace RegistroAsistencia.BLL
             Contexto db = new Contexto();
             try
             {
+                foreach (var item in asistencia.Presente)
+                {
+                    var estudiante = db.Estudiantes.Find(item.EstudianteID);
+                    if (item.Presente)
+                        estudiante.Presente += 1;
+                    else
+                        estudiante.Ausente += 1;
+                        
+                }
                 if (db.Asistencias.Add(asistencia) != null)
-                    paso = db.SaveChanges() > 0;
+                paso = db.SaveChanges() > 0;
             }
             catch (Exception)
             {

@@ -1,4 +1,4 @@
-﻿using RegistroAsistencia.BLL;
+﻿ using RegistroAsistencia.BLL;
 using RegistroAsistencia.Entidades;
 using System;
 using System.Collections.Generic;
@@ -247,12 +247,16 @@ namespace RegistroAsistencia.UI.Registro
             RepositorioBase<Estudiante> repositorio = new RepositorioBase<Estudiante>();
             int id = repositorio.Buscar((int)EstudiantecomboBox.SelectedValue).EstudianteID;
 
+            RepositorioBase<Asignatura> Base = new RepositorioBase<Asignatura>();
+            int ID = Base.Buscar((int)AsignaturacomboBox.SelectedValue).AsignaturaId;
+
             this.Detalles.Add
                 (
                     new AsistenciaDetalle(
                             iD: 0,
                             asistenciaId: (int)AsistenciaIDnumericUpDown.Value,
                             estudianteID: id,
+                            asignaturaId: ID,
                             nombre: getEstudiante(),
                             presente: PresentecheckBox.Checked
                         )
